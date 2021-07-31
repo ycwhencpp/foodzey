@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -70,25 +72,57 @@ ul li a{
     
     
 }
-ul li a:hover,a.active{
+ul li a:hover, a.active{
     background:#fff;
     color:#333;
 }
 .content{
     display:grid;
     position:relative;
-    grid-template-columns: 10% repeat(3,1fr) 2fr 10%;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 10% repeat(3,minmax(5rem,1fr)) 2fr 10%;
+    grid-template-rows: 45% 2fr 1fr;
 }
 .textbox{
     grid-column:2/4;
     grid-row:2/3;
+    color:#fff;
 }
-.content .imgbx{
+.textbox h2{
+    font-family: "poppins",sans-serif;
+    line-height:1.2em;
+    font-size:4em;
+    
+}
+.textbox p{
+margin-top:20px;
+font-size:1.10rem;
+}
+.textbox a {
+   display:inline-block;
+   font-size:1.15rem;
+    padding:.5rem 1.25rem;
+    border-radius:20px 50px 20px 50px;
+    background:#fff;           
+    color:#333;
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin-top:25px;
+   
+}
+
+.content .imgbx {
     grid-column:5/6;
     grid-row:2/3;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 .content .imgbx img{
-    max-width:400px;
-    margin-left: 6rem;
+    max-width:400px; 
+}
+.magicbox{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
 }
