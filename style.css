@@ -85,7 +85,7 @@ nav ul li a:hover,nav ul li a.active{
     grid-template-rows: 45% 2fr 1fr;
 }
 .textbox{
-    grid-column:2/4;
+    grid-column:2/5;
     grid-row:2/3;
     color:#fff;
 }
@@ -94,9 +94,11 @@ nav ul li a:hover,nav ul li a.active{
     line-height:1.2em;
     font-size:4em;
     
+    
 }
 .textbox p{
-margin-top:20px;
+margin-right:11rem;
+margin-top:30px;
 font-size:1.10rem;
 }
 .textbox a {
