@@ -1,7 +1,20 @@
+// for adding active classes to nav links and make them working
+// let nav_links=document.querySelectorAll("nav ul li a");
+
+// function linkaction(){
+//         nav_links.forEach(n=>n.classList.remove("active"));
+//         this.classList.add("active");  
+// }
+// nav_links.forEach(n=>n.addEventListener("click",linkaction));
+
+
+
+
+
+
 // adding active classses to the thumbnails of magicbox
 
 let thumbnails= document.querySelectorAll(".magicbox ul li");
-let content =document.querySelector(".content-name");
 for(let i=0;i<thumbnails.length;i++){    
    
     thumbnails[i].addEventListener("click", ()=>{
@@ -11,6 +24,18 @@ for(let i=0;i<thumbnails.length;i++){
         }
         // for adding active check class for clicked element
         thumbnails[i].className="check active";
+        
     });
    
 } 
+
+
+//changing image on click
+function imageslider(image){
+    document.querySelector(".main-fruit-img").src=image;
+    
+}
+// changing background on click
+function changebg(color){
+    document.querySelector(".bg").style.background=color;
+}
