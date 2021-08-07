@@ -39,3 +39,12 @@ function imageslider(image){
 function changebg(color){
     document.querySelector(".bg").style.background=color;
 }
+
+//adding menu toogle for mobile view
+let menutoogle=document.querySelector(".toogle");
+let navigation=document.querySelector("nav ul");
+
+menutoogle.addEventListener("click", ()=>{
+    menutoogle.classList.toggle("active");
+    navigation.classList.toggle("active");
+});

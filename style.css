@@ -7,9 +7,10 @@
     font-family:"Poppins",sans-serif;
 }
 section{
-   min-height:100vh;
+    min-height:100vh;
     width:100%;
     position:relative;
+    overflow-x: hidden;
 
 }
 .bg{
@@ -70,9 +71,7 @@ nav ul li a{
     padding:.75rem 1.5rem;
     font-size:1.25rem;
     border-radius:30px;
-    
-    
-    
+  
 }
 nav ul li a:hover,nav ul li a.active{
     background:#fff;
@@ -81,10 +80,10 @@ nav ul li a:hover,nav ul li a.active{
 .content{
     display:grid;
     position:relative;
-    grid-template-columns: 10% repeat(3,minmax(5rem,1fr)) 2fr 10%;
-    grid-template-rows: 45% 2fr 1fr;
+    grid-template-columns: 10% repeat(3,minmax(4rem,1fr)) 2fr 10%;
+    grid-template-rows: 1.5fr 2fr 1fr;
 }
-.textbox{
+.textbox{   
     grid-column:2/5;
     grid-row:2/3;
     color:#fff;
@@ -186,4 +185,105 @@ border:3px solid rgba(255,255,255,1);
     margin:10px 0;
     transform:scale(0.7);
     filter:invert(1);
+}
+@media (max-width:991px) {
+    .bg::before{
+        display: none;
+    }
+    header{
+        padding:0px;
+    }
+    nav{
+       margin:0 43px;
+    }
+    section{
+        padding:20px;
+        padding-bottom: 120px;
+        width:100%;
+    }
+    .content{
+        display: flex;
+        margin-top:8rem;
+        flex-direction: column;
+        
+    }
+    .content .textbox{
+        max-width: 100%;
+    }
+    .content .textbox h2{
+        font-size:2.5em;
+        margin-bottom: 15px;
+    }
+    .content .textbox p{
+        margin-right: 0;
+    }
+    .content  .imgbx{
+        
+        justify-content: center;
+        
+        max-width: 100%;
+    }
+    .content  .imgbx img{
+        max-width:290px;
+    }
+    .magicbox li{
+        margin:0 3px;
+        height:55px;
+    }
+    .magicbox li img{
+        max-width:40px;
+    }
+    .magicbox li.active::before{
+        position: absolute;
+        top:-150px;
+        left:0;
+        font-size:6em;
+    }
+    .social {
+        background:rgba(0,0,0,0.1);
+        right:0;
+        width:40px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    header nav ul{
+        display: none;
+    }
+    header nav ul.active{
+        position:fixed;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;
+        background:#fc4a55;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index:10;
+          
+    }
+    header nav ul.active li {
+        font-size:1.2em;
+        margin-bottom:2rem;
+    }
+    .toogle{
+        position: relative;
+        height:30px;
+        width:30px;
+        cursor: pointer;
+        background: url(images/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index:10000;
+    }
+    .toogle.active{
+        position:fixed;
+        right:20px;
+        background:url(images/close.png);
+        background-repeat: no-repeat;
+        background-position:center ;
+        background-size:25px;
+    }
 }
