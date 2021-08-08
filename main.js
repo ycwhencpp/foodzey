@@ -38,6 +38,7 @@ function imageslider(image){
 // changing background on click
 function changebg(color){
     document.querySelector(".bg").style.background=color;
+    
 }
 
 //adding menu toogle for mobile view
@@ -47,4 +48,11 @@ let navigation=document.querySelector("nav ul");
 menutoogle.addEventListener("click", ()=>{
     menutoogle.classList.toggle("active");
     navigation.classList.toggle("active");
+
+    // changing color of nav bar in accordance with bg color
+    let background=document.querySelector(".bg")
+    let bgcolor=window.getComputedStyle(background).backgroundColor;
+    document.querySelector("nav ul.active").style.background=bgcolor;
+    
+    
 });
